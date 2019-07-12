@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		401ECA6F22D830DA004F4033 /* ceshi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA6D22D830DA004F4033 /* ceshi@2x.png */; };
+		401ECA7122D85F63004F4033 /* shouye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA7022D85F62004F4033 /* shouye@2x.png */; };
 		6B04094D20D89915003AB78C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B04094C20D89915003AB78C /* AppDelegate.m */; };
 		6B04095020D89915003AB78C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B04094F20D89915003AB78C /* ViewController.m */; };
 		6B04095320D89915003AB78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B04095120D89915003AB78C /* Main.storyboard */; };
@@ -86,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		401ECA6D22D830DA004F4033 /* ceshi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ceshi@2x.png"; sourceTree = "<group>"; };
+		401ECA7022D85F62004F4033 /* shouye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shouye@2x.png"; path = "../../../../Downloads/shouye@2x.png"; sourceTree = "<group>"; };
 		6B04094820D89915003AB78C /* CoBkzProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoBkzProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B04094B20D89915003AB78C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B04094C20D89915003AB78C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -295,6 +299,8 @@
 		6B04098B20D8A224003AB78C /* imageSource */ = {
 			isa = PBXGroup;
 			children = (
+				401ECA6D22D830DA004F4033 /* ceshi@2x.png */,
+				401ECA7022D85F62004F4033 /* shouye@2x.png */,
 				6B1BD43020E236A900C3FA17 /* spuceImage@2x.png */,
 				6B1BD41020E083ED00C3FA17 /* medwasmory_start@2x.png */,
 				6B4D7F5A20D9EA1C00CC11F2 /* CTKImage@2x.png */,
@@ -646,6 +652,7 @@
 				6B04095520D89917003AB78C /* Assets.xcassets in Resources */,
 				6B04099620D8DBBF003AB78C /* todayRWImage@2x.png in Resources */,
 				6B4D7F5D20D9EA1D00CC11F2 /* ZXTImage@2x.png in Resources */,
+				401ECA6F22D830DA004F4033 /* ceshi@2x.png in Resources */,
 				6B04095320D89915003AB78C /* Main.storyboard in Resources */,
 				6B1BD43120E236A900C3FA17 /* spuceImage@2x.png in Resources */,
 				6B0409AA20D8F75F003AB78C /* arrowImage@2x.png in Resources */,
@@ -653,6 +660,7 @@
 				6B4D7F8520DA071D00CC11F2 /* SVProgressHUD.bundle in Resources */,
 				6B4D7F5920D9E4C000CC11F2 /* strengtheningImage@2x.png in Resources */,
 				6B1BD41120E083ED00C3FA17 /* medwasmory_start@2x.png in Resources */,
+				401ECA7122D85F63004F4033 /* shouye@2x.png in Resources */,
 				6B4D7F5C20D9EA1D00CC11F2 /* CTKImage@2x.png in Resources */,
 				6B04098F20D8AF41003AB78C /* finishaImage@2x.png in Resources */,
 				6B04098D20D8A239003AB78C /* TopBackImage@2x.png in Resources */,
@@ -895,7 +903,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9K6LJ22QTE;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PREFIX_HEADER = /Users/mazhi/Desktop/BkzProject/CoBkzProject/GlobalClass/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/hsbc/Desktop/bkzmj/CoBkzProject/GlobalClass/PrefixHeader.pch;
 				INFOPLIST_FILE = CoBkzProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -923,7 +931,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9K6LJ22QTE;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PREFIX_HEADER = /Users/mazhi/Desktop/BkzProject/CoBkzProject/GlobalClass/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/hsbc/Desktop/bkzmj/CoBkzProject/GlobalClass/PrefixHeader.pch;
 				INFOPLIST_FILE = CoBkzProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
