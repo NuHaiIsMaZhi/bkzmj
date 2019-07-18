@@ -9,6 +9,7 @@
 #import "TodayTaskView.h"
 #import "SDAutoLayout.h"
 #import "KNCirclePercentView.h"
+#import "WordViewController.h"
 
 #define V_SCALE (float)[UIScreen mainScreen].bounds.size.width/320
 
@@ -146,8 +147,65 @@
     groupTitleWordLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:groupTitleWordLabel];
 
-    [self setupAutoHeightWithBottomView:enenenatitleWordLabel bottomMargin:20];
+    
+    UIButton *wordButton = [UIButton new];
+    [wordButton setTitle:@"背单词" forState:UIControlStateNormal];
+    [wordButton setTitleColor:RGB2UIColor(194, 133, 166) forState:UIControlStateNormal];
+    wordButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [wordButton setImage:[UIImage imageNamed:@"news"] forState:UIControlStateNormal];
+    wordButton.layer.borderWidth = 2;
+    wordButton.layer.borderColor = RGB2UIColor(194, 133, 166).CGColor;
+    [self addSubview:wordButton];
+    wordButton.sd_layout.
+    topSpaceToView(enenenatitleWordLabel, 15).
+    centerXEqualToView(enenenatitleWordLabel).
+    heightIs(35).
+    widthIs(115);
+    wordButton.sd_cornerRadiusFromHeightRatio = @0.5;
+    wordButton.imageView.sd_layout.
+    centerYEqualToView(wordButton).
+    heightIs(wordButton.imageView.size.height).
+    widthIs(wordButton.imageView.size.width).
+    leftSpaceToView(wordButton, 5);
+    wordButton.titleLabel.sd_layout.
+    centerYEqualToView(wordButton).
+    leftSpaceToView(wordButton.imageView, 8);
 
+    UIButton *changciButton = [UIButton new];
+    [changciButton setTitle:@"背词组" forState:UIControlStateNormal];
+    [changciButton setTitleColor:RGB2UIColor(194, 133, 166) forState:UIControlStateNormal];
+    changciButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [changciButton setImage:[UIImage imageNamed:@"calendar"] forState:UIControlStateNormal];
+    changciButton.layer.borderWidth = 2;
+    changciButton.layer.borderColor = RGB2UIColor(194, 133, 166).CGColor;
+    [self addSubview:changciButton];
+    changciButton.sd_layout.
+    topSpaceToView(groupTitleWordLabel, 15).
+    centerXEqualToView(groupTitleWordLabel).
+    heightIs(35).
+    widthIs(115);
+    changciButton.sd_cornerRadiusFromHeightRatio = @0.5;
+    changciButton.imageView.sd_layout.
+    centerYEqualToView(changciButton).
+    heightIs(changciButton.imageView.size.height).
+    widthIs(changciButton.imageView.size.width).
+    leftSpaceToView(changciButton, 5);
+    changciButton.titleLabel.sd_layout.
+    centerYEqualToView(changciButton).
+    leftSpaceToView(changciButton.imageView, 8);
+    
+    [wordButton addTarget:self action:@selector(gotoWordVC) forControlEvents:UIControlEventTouchUpInside];
+    [changciButton addTarget:self action:@selector(gotoWordVC) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self setupAutoHeightWithBottomView:wordButton bottomMargin:20];
+
+}
+
+
+- (void)gotoWordVC{
+    
+    WordViewController *VC = [[WordViewController alloc]init];
+    [_vc.navigationController pushViewController:VC animated:YES];
 }
 
 @end

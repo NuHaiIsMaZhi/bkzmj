@@ -52,6 +52,8 @@
     
     self.edgesForExtendedLayout =  UIRectEdgeLeft | UIRectEdgeRight;
     
+    self.title = @"单词测试";
+    
     myScrollView=[UIScrollView new];
     myScrollView.delegate = self;
     myScrollView.pagingEnabled = YES;

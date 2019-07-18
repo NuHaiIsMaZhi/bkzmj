@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		401ECA6F22D830DA004F4033 /* ceshi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA6D22D830DA004F4033 /* ceshi@2x.png */; };
-		401ECA7122D85F63004F4033 /* shouye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA7022D85F62004F4033 /* shouye@2x.png */; };
+		401ECA7422DEC252004F4033 /* NSObject+JSONExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 401ECA7322DEC252004F4033 /* NSObject+JSONExtension.m */; };
+		401ECA7722DEC4D1004F4033 /* ModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 401ECA7622DEC4D1004F4033 /* ModelData.m */; };
+		401ECA8522DF0DDB004F4033 /* login_bg01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA7B22DF0DDB004F4033 /* login_bg01.jpg */; };
+		401ECA8622DF0DDB004F4033 /* WSLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 401ECA7C22DF0DDB004F4033 /* WSLoginView.m */; };
+		401ECA8722DF0DDB004F4033 /* owl-login-arm-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA7D22DF0DDB004F4033 /* owl-login-arm-left@2x.png */; };
+		401ECA8822DF0DDB004F4033 /* owl-login-arm-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA7E22DF0DDB004F4033 /* owl-login-arm-right@2x.png */; };
+		401ECA8922DF0DDB004F4033 /* iconfont-user.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA7F22DF0DDB004F4033 /* iconfont-user.png */; };
+		401ECA8A22DF0DDB004F4033 /* icon_hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA8022DF0DDB004F4033 /* icon_hand.png */; };
+		401ECA8B22DF0DDB004F4033 /* owl-login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA8122DF0DDB004F4033 /* owl-login@2x.png */; };
+		401ECA8C22DF0DDB004F4033 /* iconfont-password.png in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA8322DF0DDB004F4033 /* iconfont-password.png */; };
+		401ECA8D22DF0DDB004F4033 /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 401ECA8422DF0DDB004F4033 /* bg.jpeg */; };
+		401ECA9022DF12A5004F4033 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401ECA8F22DF12A4004F4033 /* loginViewController.m */; };
+		4099556022E06CEC00DE012C /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099555F22E06CEC00DE012C /* registerViewController.m */; };
+		4099556222E077CB00DE012C /* duanxinyanzhengma@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099556122E077CB00DE012C /* duanxinyanzhengma@2x.png */; };
 		6B04094D20D89915003AB78C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B04094C20D89915003AB78C /* AppDelegate.m */; };
 		6B04095020D89915003AB78C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B04094F20D89915003AB78C /* ViewController.m */; };
 		6B04095320D89915003AB78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B04095120D89915003AB78C /* Main.storyboard */; };
@@ -68,6 +80,11 @@
 		6BA0713F2126C68B00778A70 /* SaveObjeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA0713E2126C68B00778A70 /* SaveObjeModel.m */; };
 		6BED2454210574950016862A /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BED2453210574950016862A /* BaseTabBarViewController.m */; };
 		6BED24572105759A0016862A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BED24562105759A0016862A /* TestViewController.m */; };
+		6BFAF57122DCBB130015EAFF /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57022DCBB120015EAFF /* home@2x.png */; };
+		6BFAF57322DCBC0F0015EAFF /* ceshi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57222DCBC0F0015EAFF /* ceshi@2x.png */; };
+		6BFAF57522DCBE9A0015EAFF /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57422DCBE9A0015EAFF /* news@2x.png */; };
+		6BFAF57722DCC0680015EAFF /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57622DCC0680015EAFF /* calendar@2x.png */; };
+		6BFAF57922DCC6910015EAFF /* WechatIMG3@2x.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57822DCC6910015EAFF /* WechatIMG3@2x.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +105,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		401ECA6D22D830DA004F4033 /* ceshi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ceshi@2x.png"; sourceTree = "<group>"; };
-		401ECA7022D85F62004F4033 /* shouye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shouye@2x.png"; path = "../../../../Downloads/shouye@2x.png"; sourceTree = "<group>"; };
+		401ECA7222DEC252004F4033 /* NSObject+JSONExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSONExtension.h"; sourceTree = "<group>"; };
+		401ECA7322DEC252004F4033 /* NSObject+JSONExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSONExtension.m"; sourceTree = "<group>"; };
+		401ECA7522DEC4D1004F4033 /* ModelData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelData.h; sourceTree = "<group>"; };
+		401ECA7622DEC4D1004F4033 /* ModelData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelData.m; sourceTree = "<group>"; };
+		401ECA7B22DF0DDB004F4033 /* login_bg01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_bg01.jpg; sourceTree = "<group>"; };
+		401ECA7C22DF0DDB004F4033 /* WSLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLoginView.m; sourceTree = "<group>"; };
+		401ECA7D22DF0DDB004F4033 /* owl-login-arm-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "owl-login-arm-left@2x.png"; sourceTree = "<group>"; };
+		401ECA7E22DF0DDB004F4033 /* owl-login-arm-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "owl-login-arm-right@2x.png"; sourceTree = "<group>"; };
+		401ECA7F22DF0DDB004F4033 /* iconfont-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-user.png"; sourceTree = "<group>"; };
+		401ECA8022DF0DDB004F4033 /* icon_hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_hand.png; sourceTree = "<group>"; };
+		401ECA8122DF0DDB004F4033 /* owl-login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "owl-login@2x.png"; sourceTree = "<group>"; };
+		401ECA8222DF0DDB004F4033 /* WSLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLoginView.h; sourceTree = "<group>"; };
+		401ECA8322DF0DDB004F4033 /* iconfont-password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-password.png"; sourceTree = "<group>"; };
+		401ECA8422DF0DDB004F4033 /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpeg; sourceTree = "<group>"; };
+		401ECA8E22DF12A4004F4033 /* loginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		401ECA8F22DF12A4004F4033 /* loginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		4099555E22E06CEC00DE012C /* registerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = registerViewController.h; sourceTree = "<group>"; };
+		4099555F22E06CEC00DE012C /* registerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = registerViewController.m; sourceTree = "<group>"; };
+		4099556122E077CB00DE012C /* duanxinyanzhengma@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duanxinyanzhengma@2x.png"; sourceTree = "<group>"; };
 		6B04094820D89915003AB78C /* CoBkzProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoBkzProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B04094B20D89915003AB78C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B04094C20D89915003AB78C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -200,6 +234,11 @@
 		6BED2453210574950016862A /* BaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
 		6BED24552105759A0016862A /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		6BED24562105759A0016862A /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		6BFAF57022DCBB120015EAFF /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		6BFAF57222DCBC0F0015EAFF /* ceshi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ceshi@2x.png"; sourceTree = "<group>"; };
+		6BFAF57422DCBE9A0015EAFF /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news@2x.png"; sourceTree = "<group>"; };
+		6BFAF57622DCC0680015EAFF /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
+		6BFAF57822DCC6910015EAFF /* WechatIMG3@2x.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WechatIMG3@2x.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +266,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		401ECA7A22DF0DDB004F4033 /* WSLoginView */ = {
+			isa = PBXGroup;
+			children = (
+				401ECA7B22DF0DDB004F4033 /* login_bg01.jpg */,
+				4099556122E077CB00DE012C /* duanxinyanzhengma@2x.png */,
+				401ECA7C22DF0DDB004F4033 /* WSLoginView.m */,
+				401ECA7D22DF0DDB004F4033 /* owl-login-arm-left@2x.png */,
+				401ECA7E22DF0DDB004F4033 /* owl-login-arm-right@2x.png */,
+				401ECA7F22DF0DDB004F4033 /* iconfont-user.png */,
+				401ECA8022DF0DDB004F4033 /* icon_hand.png */,
+				401ECA8122DF0DDB004F4033 /* owl-login@2x.png */,
+				401ECA8222DF0DDB004F4033 /* WSLoginView.h */,
+				401ECA8322DF0DDB004F4033 /* iconfont-password.png */,
+				401ECA8422DF0DDB004F4033 /* bg.jpeg */,
+			);
+			path = WSLoginView;
+			sourceTree = "<group>";
+		};
 		6B04093F20D89915003AB78C = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +307,7 @@
 		6B04094A20D89915003AB78C /* CoBkzProject */ = {
 			isa = PBXGroup;
 			children = (
+				401ECA7A22DF0DDB004F4033 /* WSLoginView */,
 				6B943DFA211BF20200B6A476 /* GlobalClass */,
 				6B943DEE211BEC6F00B6A476 /* Data */,
 				6B1BD42020E1D8E300C3FA17 /* WordViewControl */,
@@ -299,8 +357,11 @@
 		6B04098B20D8A224003AB78C /* imageSource */ = {
 			isa = PBXGroup;
 			children = (
-				401ECA6D22D830DA004F4033 /* ceshi@2x.png */,
-				401ECA7022D85F62004F4033 /* shouye@2x.png */,
+				6BFAF57822DCC6910015EAFF /* WechatIMG3@2x.jpeg */,
+				6BFAF57622DCC0680015EAFF /* calendar@2x.png */,
+				6BFAF57422DCBE9A0015EAFF /* news@2x.png */,
+				6BFAF57222DCBC0F0015EAFF /* ceshi@2x.png */,
+				6BFAF57022DCBB120015EAFF /* home@2x.png */,
 				6B1BD43020E236A900C3FA17 /* spuceImage@2x.png */,
 				6B1BD41020E083ED00C3FA17 /* medwasmory_start@2x.png */,
 				6B4D7F5A20D9EA1C00CC11F2 /* CTKImage@2x.png */,
@@ -411,8 +472,16 @@
 				6B943DEF211BED2000B6A476 /* Group */,
 				6B04094B20D89915003AB78C /* AppDelegate.h */,
 				6B04094C20D89915003AB78C /* AppDelegate.m */,
+				401ECA7522DEC4D1004F4033 /* ModelData.h */,
+				401ECA7622DEC4D1004F4033 /* ModelData.m */,
+				401ECA8E22DF12A4004F4033 /* loginViewController.h */,
+				401ECA8F22DF12A4004F4033 /* loginViewController.m */,
+				401ECA7222DEC252004F4033 /* NSObject+JSONExtension.h */,
+				401ECA7322DEC252004F4033 /* NSObject+JSONExtension.m */,
 				6BED2452210574950016862A /* BaseTabBarViewController.h */,
 				6BED2453210574950016862A /* BaseTabBarViewController.m */,
+				4099555E22E06CEC00DE012C /* registerViewController.h */,
+				4099555F22E06CEC00DE012C /* registerViewController.m */,
 				6B04094E20D89915003AB78C /* ViewController.h */,
 				6B04094F20D89915003AB78C /* ViewController.m */,
 				6B1BD43620E2412800C3FA17 /* JIjiViewController.h */,
@@ -649,20 +718,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B04095820D89917003AB78C /* LaunchScreen.storyboard in Resources */,
+				401ECA8722DF0DDB004F4033 /* owl-login-arm-left@2x.png in Resources */,
+				4099556222E077CB00DE012C /* duanxinyanzhengma@2x.png in Resources */,
+				6BFAF57522DCBE9A0015EAFF /* news@2x.png in Resources */,
+				401ECA8A22DF0DDB004F4033 /* icon_hand.png in Resources */,
+				401ECA8B22DF0DDB004F4033 /* owl-login@2x.png in Resources */,
 				6B04095520D89917003AB78C /* Assets.xcassets in Resources */,
 				6B04099620D8DBBF003AB78C /* todayRWImage@2x.png in Resources */,
 				6B4D7F5D20D9EA1D00CC11F2 /* ZXTImage@2x.png in Resources */,
-				401ECA6F22D830DA004F4033 /* ceshi@2x.png in Resources */,
 				6B04095320D89915003AB78C /* Main.storyboard in Resources */,
+				6BFAF57322DCBC0F0015EAFF /* ceshi@2x.png in Resources */,
+				401ECA8522DF0DDB004F4033 /* login_bg01.jpg in Resources */,
+				6BFAF57122DCBB130015EAFF /* home@2x.png in Resources */,
 				6B1BD43120E236A900C3FA17 /* spuceImage@2x.png in Resources */,
 				6B0409AA20D8F75F003AB78C /* arrowImage@2x.png in Resources */,
 				6B04099120D8B379003AB78C /* SingImage@2x.png in Resources */,
+				401ECA8922DF0DDB004F4033 /* iconfont-user.png in Resources */,
+				401ECA8C22DF0DDB004F4033 /* iconfont-password.png in Resources */,
 				6B4D7F8520DA071D00CC11F2 /* SVProgressHUD.bundle in Resources */,
 				6B4D7F5920D9E4C000CC11F2 /* strengtheningImage@2x.png in Resources */,
 				6B1BD41120E083ED00C3FA17 /* medwasmory_start@2x.png in Resources */,
-				401ECA7122D85F63004F4033 /* shouye@2x.png in Resources */,
 				6B4D7F5C20D9EA1D00CC11F2 /* CTKImage@2x.png in Resources */,
+				401ECA8D22DF0DDB004F4033 /* bg.jpeg in Resources */,
+				401ECA8822DF0DDB004F4033 /* owl-login-arm-right@2x.png in Resources */,
+				6BFAF57922DCC6910015EAFF /* WechatIMG3@2x.jpeg in Resources */,
 				6B04098F20D8AF41003AB78C /* finishaImage@2x.png in Resources */,
+				6BFAF57722DCC0680015EAFF /* calendar@2x.png in Resources */,
 				6B04098D20D8A239003AB78C /* TopBackImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,6 +769,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				401ECA8622DF0DDB004F4033 /* WSLoginView.m in Sources */,
 				6B04099F20D8E02F003AB78C /* LoopProgressView.m in Sources */,
 				6BA0713921251E7000778A70 /* AnalysisView.m in Sources */,
 				6B0409A020D8E02F003AB78C /* KNPercentLabel.m in Sources */,
@@ -701,6 +783,7 @@
 				6B04099420D8DB41003AB78C /* TodayTaskView.m in Sources */,
 				6B4D7F7320DA05A100CC11F2 /* AFURLResponseSerialization.m in Sources */,
 				6BED24572105759A0016862A /* TestViewController.m in Sources */,
+				401ECA7422DEC252004F4033 /* NSObject+JSONExtension.m in Sources */,
 				6B0409AD20D90136003AB78C /* TaskButton.m in Sources */,
 				6B4D7F7920DA05A100CC11F2 /* AFHTTPRequestOperation.m in Sources */,
 				6B943DF6211BED8400B6A476 /* GroupViewController.m in Sources */,
@@ -711,6 +794,7 @@
 				6B1BD42620E1DA2100C3FA17 /* WordInfoView.m in Sources */,
 				6B4D7F8420DA071D00CC11F2 /* SVProgressHUD.m in Sources */,
 				6B943E6121215DED00B6A476 /* QuestionView.m in Sources */,
+				401ECA7722DEC4D1004F4033 /* ModelData.m in Sources */,
 				6B1BD42320E1D8F500C3FA17 /* MyWordViewController.m in Sources */,
 				6B943E00211C374600B6A476 /* TestQuestionViewController.m in Sources */,
 				6B1BD41A20E0916B00C3FA17 /* WordListTableViewCell.m in Sources */,
@@ -724,12 +808,14 @@
 				6B04094D20D89915003AB78C /* AppDelegate.m in Sources */,
 				6B04098720D89B53003AB78C /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				6B1BD41420E0847D00C3FA17 /* WordCollectionViewCell.m in Sources */,
+				4099556022E06CEC00DE012C /* registerViewController.m in Sources */,
 				6B0409B020D90327003AB78C /* EveryDayView.m in Sources */,
 				6B04098620D89B53003AB78C /* UIView+SDAutoLayout.m in Sources */,
 				6B4D7F7720DA05A100CC11F2 /* AFHTTPRequestOperationManager.m in Sources */,
 				6B1BD41720E08ED600C3FA17 /* WordListViewController.m in Sources */,
 				6B4D7F7A20DA05A100CC11F2 /* AFNetworkReachabilityManager.m in Sources */,
 				6BA0713F2126C68B00778A70 /* SaveObjeModel.m in Sources */,
+				401ECA9022DF12A5004F4033 /* loginViewController.m in Sources */,
 				6B0409A520D8F176003AB78C /* TaskListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,7 +989,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9K6LJ22QTE;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PREFIX_HEADER = /Users/hsbc/Desktop/bkzmj/CoBkzProject/GlobalClass/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CoBkzProject/GlobalClass/PrefixHeader.pch";
 				INFOPLIST_FILE = CoBkzProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -931,7 +1017,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9K6LJ22QTE;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PREFIX_HEADER = /Users/hsbc/Desktop/bkzmj/CoBkzProject/GlobalClass/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CoBkzProject/GlobalClass/PrefixHeader.pch";
 				INFOPLIST_FILE = CoBkzProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

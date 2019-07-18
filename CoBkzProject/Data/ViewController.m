@@ -14,6 +14,8 @@
 #import "WordViewController.h"
 #import "NetWorkRequest.h"
 #import "TopView.h"
+#import "ModelData.h"
+#import "NSObject+JSONExtension.h"
 
 #define RGB2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0)  alpha:1]
 
@@ -84,6 +86,10 @@
     
 //    [self demo2];
     
+    NSDictionary *info = @{@"title": @"标题", @"name": @"dada", @"test": @"hello"};
+    ModelData *model = [[ModelData alloc]initWithDictionary:info];
+    NSLog(@"%@", model.title);     // 输出：标题
+    NSLog(@"%@", model.name);     // 输出：dada
 }
 
 - (void)signel{
@@ -180,6 +186,7 @@
     rightSpaceToView(baseScrollView, 0);
     
     TodayTaskView *dayTaskView = [[TodayTaskView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    dayTaskView.vc = self;
     dayTaskView.backgroundColor = [UIColor whiteColor];
     [baseScrollView addSubview:dayTaskView];
     dayTaskView.sd_layout.

@@ -10,8 +10,9 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+- (void)changeMainVC;
 
+@property (strong, nonatomic) UIWindow *window;
 
 @end
 

@@ -10,4 +10,6 @@
 
 @interface TodayTaskView : UIView
 
+@property (nonatomic,retain)UIViewController *vc;
+
 @end

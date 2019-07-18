@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BaseTabBarViewController.h"
 #import "ViewController.h"
+#import "loginViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,11 +19,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    BaseTabBarViewController *VC = [[BaseTabBarViewController alloc] init];
-    self.window.rootViewController = VC;
-    
+//    BOOL islogin = NO;
+//    if (!islogin) {
+//
+//        UINavigationController *nav = [[UINavigationController alloc]init];
+//        loginViewController *loginvc = [[loginViewController alloc]init];
+//        [nav presentViewController:loginvc animated:YES completion:nil];
+//        self.window.rootViewController = loginvc;
+//
+//    }else{
+//
+//        [self changeMainVC];
+//    }
+
+    [self changeMainVC];
+
     // Override point for customization after application launch.
     return YES;
+}
+
+- (void)changeMainVC{
+    
+    BaseTabBarViewController *VC = [[BaseTabBarViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:VC];
+    self.window.rootViewController = nav;
+    
+    [nav pushViewController:[[loginViewController alloc]init] animated:NO];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

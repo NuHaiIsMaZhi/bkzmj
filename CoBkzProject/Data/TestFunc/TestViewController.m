@@ -19,10 +19,103 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor yellowColor];
+    
+    self.title = @"测试课堂";
     
     AddTestBtn(self)
+
+    UIScrollView *mysc = [UIScrollView new];
+    mysc.alwaysBounceVertical = YES;
+    [self.view addSubview:mysc];
+    mysc.sd_layout.
+    topSpaceToView(self.view, 0).
+    leftSpaceToView(self.view, 0).
+    rightSpaceToView(self.view, 0).
+    bottomSpaceToView(self.view, 0);
+
     
+    UIImageView *imagevew = [UIImageView new];
+    imagevew.userInteractionEnabled = YES;
+    imagevew.image = [UIImage imageNamed:@"WechatIMG3@2x.jpeg"];
+    [mysc addSubview:imagevew];
+    imagevew.sd_layout.
+    topSpaceToView(mysc, 0).
+    leftSpaceToView(mysc, 0).
+    rightSpaceToView(mysc, 0).
+    bottomSpaceToView(mysc, 0);
+
+    UIView *base = [UIView new];
+    base.userInteractionEnabled = YES;
+    base.backgroundColor = UIColor.whiteColor;
+    base.layer.cornerRadius = 6;
+    [imagevew addSubview:base];
+    base.sd_layout.
+    topSpaceToView(imagevew, 64+0).
+    heightIs(160).
+    leftSpaceToView(imagevew, 15).
+    rightSpaceToView(imagevew, 15);
+    
+    UILabel *middonlabel = [UILabel new];
+    middonlabel.textAlignment = NSTextAlignmentCenter;
+    middonlabel.backgroundColor = RGB2UIColor(105, 195, 173);
+    middonlabel.text = @"ABC";
+    middonlabel.textColor = UIColor.whiteColor;
+    middonlabel.font = [UIFont boldSystemFontOfSize:25];
+    [base addSubview:middonlabel];
+    middonlabel.sd_layout.
+    centerYEqualToView(base).
+    widthIs(160).
+    leftSpaceToView(base, 45).
+    heightIs(40);
+    middonlabel.sd_cornerRadiusFromHeightRatio = @0.5;
+    
+    UILabel *topLabel = [UILabel new];
+    topLabel.backgroundColor = RGB2UIColor(225, 225, 225);
+    [base addSubview:topLabel];
+    topLabel.sd_layout.
+    topSpaceToView(base, 31).
+    centerXEqualToView(middonlabel).
+    widthIs(110).
+    heightIs(23);
+    topLabel.sd_cornerRadiusFromHeightRatio = @0.5;
+
+    UILabel *bottomLabel = [UILabel new];
+    bottomLabel.backgroundColor = RGB2UIColor(225, 225, 225);
+    [base addSubview:bottomLabel];
+    bottomLabel.sd_layout.
+    topSpaceToView(middonlabel, 5).
+    centerXEqualToView(middonlabel).
+    widthIs(110).
+    heightIs(23);
+    bottomLabel.sd_cornerRadiusFromHeightRatio = @0.5;
+    
+    UILabel *textlabel = [UILabel new];
+    textlabel.textAlignment = NSTextAlignmentCenter;
+    textlabel.text = @"单词测试";
+    textlabel.textColor = RGB2UIColor(105, 195, 173);
+    textlabel.font = [UIFont boldSystemFontOfSize:27];
+    [base addSubview:textlabel];
+    textlabel.sd_layout.
+    centerYEqualToView(base).
+    leftSpaceToView(middonlabel, 20).
+    autoHeightRatio(0);
+    textlabel.sd_maxWidth = @320;
+    
+    UILabel *remindText = [UILabel new];
+    remindText.textAlignment = NSTextAlignmentCenter;
+    remindText.text = @"———  更多复习功能，即将上线!  ———";
+    remindText.textColor = RGB2UIColor(225, 225, 225);
+    remindText.font = [UIFont systemFontOfSize:16];
+    [imagevew addSubview:remindText];
+    remindText.sd_layout.
+    topSpaceToView(base, 20).
+    centerXEqualToView(base).
+    autoHeightRatio(0);
+    remindText.sd_maxWidth = @320;
+    
+    UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(testSelectAciton)];
+    [base addGestureRecognizer:pan];
+
 }
 
 - (void)testSelectAciton{

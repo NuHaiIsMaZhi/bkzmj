@@ -99,7 +99,7 @@
     proLabel.textColor = [UIColor colorWithRed:((255) / 255.0) green:((91) / 255.0) blue:((95) / 255.0)  alpha:1];
     proLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:42];
     proLabel.textColor = [UIColor colorWithRed:((255) / 255.0) green:((91) / 255.0) blue:((95) / 255.0)  alpha:1];
-    proLabel.text = @"7";
+    proLabel.text = @"1";
     proLabel.textAlignment = NSTextAlignmentCenter;
     [baseView addSubview:proLabel];
     proLabel.sd_layout.
