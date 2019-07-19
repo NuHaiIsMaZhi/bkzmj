@@ -53,7 +53,7 @@
     [_textField2 setValue:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.7] forKeyPath:@"_placeholderLabel.textColor"];
     
     UIButton *yanbtn = [[UIButton alloc]init];
-    [yanbtn setTitle:@"获取" forState:UIControlStateNormal];
+    [yanbtn setTitle:@"获取 " forState:UIControlStateNormal];
     [yanbtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     yanbtn.titleLabel.font = [UIFont systemFontOfSize:14];
     yanbtn.backgroundColor = RGB2UIColor(255, 91, 96);
