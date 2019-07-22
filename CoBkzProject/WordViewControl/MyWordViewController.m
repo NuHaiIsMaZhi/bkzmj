@@ -34,10 +34,19 @@
     NSDictionary *wordDict;
 }
 
+- (id)init{
+    
+    if (self = [super init]) {
+        
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
     self.title = [NSString stringWithFormat:@"第%ld组",_number];
     
     self.view.backgroundColor = [UIColor colorWithRed:((246) / 255.0) green:((246) / 255.0) blue:((246) / 255.0)  alpha:1];

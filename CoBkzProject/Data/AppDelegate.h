@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "basenavViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 - (void)changeMainVC;
+
+@property (nonatomic,retain)basenavViewController *nav;
 
 @property (strong, nonatomic) UIWindow *window;
 

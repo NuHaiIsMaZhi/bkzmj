@@ -8,6 +8,8 @@
 
 #import "TestViewController.h"
 #import "TestQuestionViewController.h"
+#import "loginViewController.h"
+#import "AppDelegate.h"
 
 @interface TestViewController ()
 
@@ -15,14 +17,21 @@
 
 @implementation TestViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate.nav setNavigationBarHidden:true];
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight;
     
-    self.title = @"测试课堂";
-    
-    AddTestBtn(self)
+    self.navigationItem.title = @"测试课堂";
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 
     UIScrollView *mysc = [UIScrollView new];
     mysc.alwaysBounceVertical = YES;
@@ -32,7 +41,6 @@
     leftSpaceToView(self.view, 0).
     rightSpaceToView(self.view, 0).
     bottomSpaceToView(self.view, 0);
-
     
     UIImageView *imagevew = [UIImageView new];
     imagevew.userInteractionEnabled = YES;
@@ -43,7 +51,7 @@
     leftSpaceToView(mysc, 0).
     rightSpaceToView(mysc, 0).
     bottomSpaceToView(mysc, 0);
-
+    
     UIView *base = [UIView new];
     base.userInteractionEnabled = YES;
     base.backgroundColor = UIColor.whiteColor;
@@ -115,13 +123,33 @@
     
     UITapGestureRecognizer *pan = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(testSelectAciton)];
     [base addGestureRecognizer:pan];
-
+    
+    UIButton *singoutbtn = [UIButton new];
+    [singoutbtn setTitle:@"退出" forState:UIControlStateNormal];
+    [singoutbtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    singoutbtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    singoutbtn.backgroundColor = RGB2UIColor(255, 91, 96);
+    [self.view addSubview:singoutbtn];
+    singoutbtn.sd_layout.
+    bottomSpaceToView(self.view, 20).
+    heightIs(55).
+    leftSpaceToView(self.view, 20).
+    rightSpaceToView(self.view, 30);
+    singoutbtn.sd_cornerRadius = @4;
+    [singoutbtn addTarget:self action:@selector(singoutaction) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void)testSelectAciton{
     
     TestQuestionViewController *queVC = [TestQuestionViewController new];
     [self.navigationController pushViewController:queVC animated:YES];    
+}
+
+- (void)singoutaction{
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate.nav pushViewController:[[loginViewController alloc]init] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

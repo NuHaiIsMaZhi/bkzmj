@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JIjiViewController : UIViewController
+@interface JIjiViewController : baseViewController
 
 @property (nonatomic,retain)NSString *titleStr;
 

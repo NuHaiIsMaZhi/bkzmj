@@ -48,7 +48,7 @@
     
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-  
+    
     self.wodeCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:flowLayout];
     
     //设置代理
@@ -63,7 +63,7 @@
     [self.wodeCollectionView registerClass:[WordCollectionViewCell class] forCellWithReuseIdentifier:@"muCell"];
     
     [self setupDownloadView];
-
+    
     gorupPerNum = 50;
     downObject = [DownWordObject singleDownObject];
     __block WordViewController *blockSelf = self;
@@ -130,7 +130,7 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
     NSInteger number = 0;
-
+    
     if (dataSourceArray) {
         if (dataSourceArray.count %gorupPerNum != 0)
             number = dataSourceArray.count/gorupPerNum +1;

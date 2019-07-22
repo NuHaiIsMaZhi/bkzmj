@@ -28,12 +28,26 @@
     UIScrollView *baseScrollView;
 }
 
+//- (void)viewWillAppear:(BOOL)animated{
+//
+//    [super viewWillAppear:animated];
+//    self.navigationController.navigationBarHidden = YES;
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated{
+//
+//    [super viewWillDisappear:animated];
+//
+//    self.navigationController.navigationBarHidden = NO;
+//}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     
     self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight;
-    
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+
     self.title = @"学习主页";
     
     baseScrollView = [UIScrollView new];
@@ -43,7 +57,6 @@
     baseScrollView.showsHorizontalScrollIndicator = NO;
     baseScrollView.backgroundColor = RGB2UIColor(246, 246, 246);
     [self.view addSubview:baseScrollView];
-    
     baseScrollView.sd_layout.
     topSpaceToView(self.view, 0).
     leftSpaceToView(self.view, 0).

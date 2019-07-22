@@ -17,6 +17,16 @@
     UIWebView *_webView;
 }
 
+- (id)init{
+    
+    if (self = [super init]) {
+        
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

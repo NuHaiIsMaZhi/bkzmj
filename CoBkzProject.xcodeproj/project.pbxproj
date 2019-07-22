@@ -21,6 +21,9 @@
 		401ECA9022DF12A5004F4033 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401ECA8F22DF12A4004F4033 /* loginViewController.m */; };
 		4099556022E06CEC00DE012C /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099555F22E06CEC00DE012C /* registerViewController.m */; };
 		4099556222E077CB00DE012C /* duanxinyanzhengma@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099556122E077CB00DE012C /* duanxinyanzhengma@2x.png */; };
+		4099558A22E1B90D00DE012C /* baseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099558922E1B90D00DE012C /* baseViewController.m */; };
+		4099558C22E1BA9600DE012C /* fanhui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4099558B22E1BA9600DE012C /* fanhui@2x.png */; };
+		4099558F22E5C2EA00DE012C /* basenavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099558E22E5C2EA00DE012C /* basenavViewController.m */; };
 		6B04094D20D89915003AB78C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B04094C20D89915003AB78C /* AppDelegate.m */; };
 		6B04095020D89915003AB78C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B04094F20D89915003AB78C /* ViewController.m */; };
 		6B04095320D89915003AB78C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B04095120D89915003AB78C /* Main.storyboard */; };
@@ -124,6 +127,11 @@
 		4099555E22E06CEC00DE012C /* registerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = registerViewController.h; sourceTree = "<group>"; };
 		4099555F22E06CEC00DE012C /* registerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = registerViewController.m; sourceTree = "<group>"; };
 		4099556122E077CB00DE012C /* duanxinyanzhengma@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duanxinyanzhengma@2x.png"; sourceTree = "<group>"; };
+		4099558822E1B90D00DE012C /* baseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = baseViewController.h; sourceTree = "<group>"; };
+		4099558922E1B90D00DE012C /* baseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = baseViewController.m; sourceTree = "<group>"; };
+		4099558B22E1BA9600DE012C /* fanhui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui@2x.png"; sourceTree = "<group>"; };
+		4099558D22E5C2EA00DE012C /* basenavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = basenavViewController.h; sourceTree = "<group>"; };
+		4099558E22E5C2EA00DE012C /* basenavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = basenavViewController.m; sourceTree = "<group>"; };
 		6B04094820D89915003AB78C /* CoBkzProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoBkzProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B04094B20D89915003AB78C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B04094C20D89915003AB78C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -269,15 +277,16 @@
 		401ECA7A22DF0DDB004F4033 /* WSLoginView */ = {
 			isa = PBXGroup;
 			children = (
-				401ECA7B22DF0DDB004F4033 /* login_bg01.jpg */,
-				4099556122E077CB00DE012C /* duanxinyanzhengma@2x.png */,
+				401ECA8222DF0DDB004F4033 /* WSLoginView.h */,
 				401ECA7C22DF0DDB004F4033 /* WSLoginView.m */,
+				401ECA7B22DF0DDB004F4033 /* login_bg01.jpg */,
+				4099558B22E1BA9600DE012C /* fanhui@2x.png */,
+				4099556122E077CB00DE012C /* duanxinyanzhengma@2x.png */,
 				401ECA7D22DF0DDB004F4033 /* owl-login-arm-left@2x.png */,
 				401ECA7E22DF0DDB004F4033 /* owl-login-arm-right@2x.png */,
 				401ECA7F22DF0DDB004F4033 /* iconfont-user.png */,
 				401ECA8022DF0DDB004F4033 /* icon_hand.png */,
 				401ECA8122DF0DDB004F4033 /* owl-login@2x.png */,
-				401ECA8222DF0DDB004F4033 /* WSLoginView.h */,
 				401ECA8322DF0DDB004F4033 /* iconfont-password.png */,
 				401ECA8422DF0DDB004F4033 /* bg.jpeg */,
 			);
@@ -472,6 +481,10 @@
 				6B943DEF211BED2000B6A476 /* Group */,
 				6B04094B20D89915003AB78C /* AppDelegate.h */,
 				6B04094C20D89915003AB78C /* AppDelegate.m */,
+				4099558D22E5C2EA00DE012C /* basenavViewController.h */,
+				4099558E22E5C2EA00DE012C /* basenavViewController.m */,
+				4099558822E1B90D00DE012C /* baseViewController.h */,
+				4099558922E1B90D00DE012C /* baseViewController.m */,
 				401ECA7522DEC4D1004F4033 /* ModelData.h */,
 				401ECA7622DEC4D1004F4033 /* ModelData.m */,
 				401ECA8E22DF12A4004F4033 /* loginViewController.h */,
@@ -741,6 +754,7 @@
 				6B4D7F5C20D9EA1D00CC11F2 /* CTKImage@2x.png in Resources */,
 				401ECA8D22DF0DDB004F4033 /* bg.jpeg in Resources */,
 				401ECA8822DF0DDB004F4033 /* owl-login-arm-right@2x.png in Resources */,
+				4099558C22E1BA9600DE012C /* fanhui@2x.png in Resources */,
 				6BFAF57922DCC6910015EAFF /* WechatIMG3@2x.jpeg in Resources */,
 				6B04098F20D8AF41003AB78C /* finishaImage@2x.png in Resources */,
 				6BFAF57722DCC0680015EAFF /* calendar@2x.png in Resources */,
@@ -780,6 +794,7 @@
 				6B4D7F7B20DA05A100CC11F2 /* AFSecurityPolicy.m in Sources */,
 				6BED2454210574950016862A /* BaseTabBarViewController.m in Sources */,
 				6B04098A20D89D3B003AB78C /* TopView.m in Sources */,
+				4099558F22E5C2EA00DE012C /* basenavViewController.m in Sources */,
 				6B04099420D8DB41003AB78C /* TodayTaskView.m in Sources */,
 				6B4D7F7320DA05A100CC11F2 /* AFURLResponseSerialization.m in Sources */,
 				6BED24572105759A0016862A /* TestViewController.m in Sources */,
@@ -812,6 +827,7 @@
 				6B0409B020D90327003AB78C /* EveryDayView.m in Sources */,
 				6B04098620D89B53003AB78C /* UIView+SDAutoLayout.m in Sources */,
 				6B4D7F7720DA05A100CC11F2 /* AFHTTPRequestOperationManager.m in Sources */,
+				4099558A22E1B90D00DE012C /* baseViewController.m in Sources */,
 				6B1BD41720E08ED600C3FA17 /* WordListViewController.m in Sources */,
 				6B4D7F7A20DA05A100CC11F2 /* AFNetworkReachabilityManager.m in Sources */,
 				6BA0713F2126C68B00778A70 /* SaveObjeModel.m in Sources */,
