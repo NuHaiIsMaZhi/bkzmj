@@ -48,29 +48,19 @@
 - (void)createTabbar{
     
     UITabBarItem *exeItem = [self.tabBar.items objectAtIndex:0];
-    [exeItem setImage:[UIImage imageNamed:@"home"]];
-    exeItem.selectedImage = [UIImage imageNamed:@"home"];
     [exeItem setTitle:@"首页"];
+    [exeItem setImage:[[UIImage imageNamed:@"home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [exeItem setSelectedImage:[[UIImage imageNamed:@"home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [exeItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:RGB2UIColor(255, 92, 97),NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     [exeItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:RGB2UIColor(110, 110, 110),NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
     exeItem.selectedImage = [exeItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     UITabBarItem *testItem = [self.tabBar.items objectAtIndex:1];
-    exeItem.selectedImage = [UIImage imageNamed:@"hceshiome"];
+    [testItem setImage:[[UIImage imageNamed:@"ceshi"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    [testItem setSelectedImage:[[UIImage imageNamed:@"ceshi"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [testItem setTitle:@"测试"];
-//    [testItem setImage:[UIImage imageNamed:@"ceshi"]];
     [testItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:RGB2UIColor(255, 92, 97),NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     [testItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:RGB2UIColor(110, 110, 110),NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
-//    NSMutableDictionary *atts=[NSMutableDictionary dictionary];
-//    // 更改文字大小
-//    atts[NSFontAttributeName]=[UIFont systemFontOfSize:12];
-//    // 更改文字颜色
-//    atts[NSForegroundColorAttributeName]=[UIColor darkGrayColor];
-//
-//    NSMutableDictionary *selectedAtts=[NSMutableDictionary dictionary];
-//    selectedAtts[NSFontAttributeName]=[UIFont systemFontOfSize:12];
-//    selectedAtts[NSForegroundColorAttributeName]=RGB2UIColor(110, 110, 110);
-//    [testItem setTitleTextAttributes:selectedAtts forState:UIControlStateSelected];
 }
 
 

@@ -7,9 +7,11 @@
 //
 
 #import "loginViewController.h"
+#import "NetWorkRequest.h"
 #import "AppDelegate.h"
 #import "WSLoginView.h"
 #import "registerViewController.h"
+#import "SVProgressHUD.h"
 
 @interface loginViewController ()
 
@@ -42,12 +44,34 @@
     
     [wsLoginV setClickBlock:^(NSString *textField1Text, NSString *textField2Text) {
         
-        
-        [self.navigationController popViewControllerAnimated:YES];
+        [self loginactionstr:textField1Text pass:textField2Text];
     }];
     [wsLoginV setRegisterblock:^{
        
         [self.navigationController pushViewController:[registerViewController new] animated:YES];
+    }];
+}
+
+- (void)loginactionstr:(NSString*)str pass:(NSString*)str2{
+    
+    
+    NSString *urlStr = @"https://v6.beikaozu.com/users/login/v2?";
+    NSMutableDictionary* postDict = [[NSMutableDictionary alloc] init];
+    if (str.length == 0) {
+        
+        return [SVProgressHUD showErrorWithStatus:@"请输入账号"];
+    }
+    if (str2.length == 0) {
+        
+        return [SVProgressHUD showErrorWithStatus:@"请输入密码"];
+    }
+    [postDict setObject:str forKey:@"user"];
+    [postDict setObject:str2 forKey:@"password"];
+
+    
+    [NetWorkRequest postataShowHUD:YES withUrl:urlStr parameter:postDict andResponse:^(NSInteger code, id contentData, NSDictionary *exData) {
+        
+        [self.navigationController popViewControllerAnimated:YES];
     }];
 }
 

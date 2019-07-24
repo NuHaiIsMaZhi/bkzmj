@@ -7,12 +7,18 @@
 //
 
 #import "registerViewController.h"
+#import "NetWorkRequest.h"
 
 @interface registerViewController ()
 
 @end
 
-@implementation registerViewController
+@implementation registerViewController{
+ 
+    UIButton *yanbtn;
+    NSTimer *verifyTime;
+    int mTime;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,7 +58,8 @@
     [self.view addSubview:self.textField2];
     [_textField2 setValue:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.7] forKeyPath:@"_placeholderLabel.textColor"];
     
-    UIButton *yanbtn = [[UIButton alloc]init];
+    yanbtn = [[UIButton alloc]init];
+    [yanbtn addTarget:self action:@selector(sendVerityAction) forControlEvents:UIControlEventTouchUpInside];
     [yanbtn setTitle:@"获取 " forState:UIControlStateNormal];
     [yanbtn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     yanbtn.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -93,6 +100,9 @@
     
     self.view.backgroundColor = RGB2UIColor(200, 200, 200);
     // Do any additional setup after loading the view.
+    
+    verifyTime = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAdvanced:) userInfo:nil repeats:YES];
+    mTime = 60;
 }
 
 - (void)creatVisulBg {
@@ -109,6 +119,45 @@
     [imageview addSubview:effectview];
 }
 
+- (void)timerAdvanced:(NSTimer *)timer
+{
+    mTime--;
+    
+    if (mTime == 0)
+    {
+        [verifyTime invalidate];
+        [yanbtn setTitle:@"重新发送" forState:UIControlStateNormal];
+        yanbtn.backgroundColor = RGB2UIColor(255, 91, 96);
+        [yanbtn addTarget:self action:@selector(sendVerityAction) forControlEvents:UIControlEventTouchUpInside];
+        yanbtn.enabled = YES;
+    }
+    else
+    {
+        NSString *timeStr = [NSString stringWithFormat:@"%d",mTime];
+        [yanbtn setTitle:timeStr forState:UIControlStateNormal];
+        yanbtn.backgroundColor = GrayUIColor(167);
+        [yanbtn removeTarget:self action:@selector(sendVerityAction) forControlEvents:UIControlEventTouchUpInside];
+        yanbtn.enabled = NO;
+    }
+}
+- (void)sendVerityAction{
+    
+    verifyTime = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAdvanced:) userInfo:nil repeats:YES];
+    mTime = 60;
+
+    return;
+    NSMutableDictionary *postDict = [[NSMutableDictionary alloc]init];
+    [postDict setObject:_textField1.text forKey:@"mobile"];
+    [postDict setObject:_textField2.text forKey:@"mcode"];
+    [postDict setObject:_textField3.text forKey:@"password"];
+    [postDict setObject:@"appstore" forKey:@"channel"];
+    
+    NSString *url = @"https://v6.beikaozu.com/users/reg/bymobile?";
+    [NetWorkRequest postataShowHUD:YES withUrl:url parameter:postDict andResponse:^(NSInteger code, id contentData, NSDictionary *exData) {
+        
+    }];
+
+}
 /*
 #pragma mark - Navigation
 

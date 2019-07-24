@@ -37,13 +37,12 @@
 }
 
 +(void)postataShowHUD:(BOOL)show withUrl:(NSString *)urlString parameter:(NSDictionary *)parameterDictionary andResponse:(NetWorkToolsGetCompletionHandler)block{
-
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.requestSerializer.timeoutInterval = 20;
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-
     
     [manager POST:urlString parameters:parameterDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
         
