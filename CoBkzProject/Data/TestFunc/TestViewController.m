@@ -150,6 +150,9 @@
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.nav pushViewController:[[loginViewController alloc]init] animated:YES];
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"mjjjj"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)didReceiveMemoryWarning {

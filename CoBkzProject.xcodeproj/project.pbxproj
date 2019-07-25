@@ -88,6 +88,8 @@
 		6BFAF57522DCBE9A0015EAFF /* news@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57422DCBE9A0015EAFF /* news@2x.png */; };
 		6BFAF57722DCC0680015EAFF /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57622DCC0680015EAFF /* calendar@2x.png */; };
 		6BFAF57922DCC6910015EAFF /* WechatIMG3@2x.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57822DCC6910015EAFF /* WechatIMG3@2x.jpeg */; };
+		6BFAF57D22E9F7280015EAFF /* ErrorImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57B22E9F7270015EAFF /* ErrorImage@2x.png */; };
+		6BFAF57E22E9F7280015EAFF /* SucessImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFAF57C22E9F7280015EAFF /* SucessImage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +249,8 @@
 		6BFAF57422DCBE9A0015EAFF /* news@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "news@2x.png"; sourceTree = "<group>"; };
 		6BFAF57622DCC0680015EAFF /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
 		6BFAF57822DCC6910015EAFF /* WechatIMG3@2x.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "WechatIMG3@2x.jpeg"; sourceTree = "<group>"; };
+		6BFAF57B22E9F7270015EAFF /* ErrorImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ErrorImage@2x.png"; sourceTree = "<group>"; };
+		6BFAF57C22E9F7280015EAFF /* SucessImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SucessImage@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +370,8 @@
 		6B04098B20D8A224003AB78C /* imageSource */ = {
 			isa = PBXGroup;
 			children = (
+				6BFAF57B22E9F7270015EAFF /* ErrorImage@2x.png */,
+				6BFAF57C22E9F7280015EAFF /* SucessImage@2x.png */,
 				6BFAF57822DCC6910015EAFF /* WechatIMG3@2x.jpeg */,
 				6BFAF57622DCC0680015EAFF /* calendar@2x.png */,
 				6BFAF57422DCBE9A0015EAFF /* news@2x.png */,
@@ -731,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B04095820D89917003AB78C /* LaunchScreen.storyboard in Resources */,
+				6BFAF57E22E9F7280015EAFF /* SucessImage@2x.png in Resources */,
 				401ECA8722DF0DDB004F4033 /* owl-login-arm-left@2x.png in Resources */,
 				4099556222E077CB00DE012C /* duanxinyanzhengma@2x.png in Resources */,
 				6BFAF57522DCBE9A0015EAFF /* news@2x.png in Resources */,
@@ -745,6 +752,7 @@
 				6BFAF57122DCBB130015EAFF /* home@2x.png in Resources */,
 				6B1BD43120E236A900C3FA17 /* spuceImage@2x.png in Resources */,
 				6B0409AA20D8F75F003AB78C /* arrowImage@2x.png in Resources */,
+				6BFAF57D22E9F7280015EAFF /* ErrorImage@2x.png in Resources */,
 				6B04099120D8B379003AB78C /* SingImage@2x.png in Resources */,
 				401ECA8922DF0DDB004F4033 /* iconfont-user.png in Resources */,
 				401ECA8C22DF0DDB004F4033 /* iconfont-password.png in Resources */,

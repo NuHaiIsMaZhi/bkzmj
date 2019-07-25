@@ -55,7 +55,7 @@
 - (void)loginactionstr:(NSString*)str pass:(NSString*)str2{
     
     
-    NSString *urlStr = @"https://v6.beikaozu.com/users/login/v2?";
+    NSString *urlStr = @"https://v6.beikaozu.com/users/login/v2?platform=ios&version=4.4.3&terminal=student";
     NSMutableDictionary* postDict = [[NSMutableDictionary alloc] init];
     if (str.length == 0) {
         
@@ -68,10 +68,11 @@
     [postDict setObject:str forKey:@"user"];
     [postDict setObject:str2 forKey:@"password"];
 
-    
     [NetWorkRequest postataShowHUD:YES withUrl:urlStr parameter:postDict andResponse:^(NSInteger code, id contentData, NSDictionary *exData) {
         
         [self.navigationController popViewControllerAnimated:YES];
+        [[NSUserDefaults standardUserDefaults] setObject:@"mjjjj" forKey:@"mjjjj"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }];
 }
 

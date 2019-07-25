@@ -17,7 +17,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    manager.requestSerializer.timeoutInterval = 20;
+    manager.requestSerializer.timeoutInterval = 30;
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];    
     [SVProgressHUD showWithStatus:@"请求中"];
     [manager GET:urlString parameters:parameterDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -39,23 +39,23 @@
 +(void)postataShowHUD:(BOOL)show withUrl:(NSString *)urlString parameter:(NSDictionary *)parameterDictionary andResponse:(NetWorkToolsGetCompletionHandler)block{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.requestSerializer.timeoutInterval = 20;
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    
-    [manager POST:urlString parameters:parameterDictionary success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager POST:urlString parameters:parameterDictionary constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
-        [SVProgressHUD dismiss];
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSDictionary *data = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        
         block([data[@"code"] integerValue],data[@"data"],data[@"exData"]);
-        
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
         [SVProgressHUD showErrorWithStatus:@"请求失败"];
-        
+
     }];
 }
+
 @end

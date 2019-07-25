@@ -167,7 +167,7 @@ typedef NS_ENUM(NSInteger, WSLoginShowType) {
     [forgentPasswordBtn setTitle:@"忘记密码?" forState:UIControlStateNormal];
     [forgentPasswordBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     forgentPasswordBtn.titleLabel.font = [UIFont systemFontOfSize:17];
-    [self addSubview:forgentPasswordBtn];
+//    [self addSubview:forgentPasswordBtn];
     
 }
 

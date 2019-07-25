@@ -37,7 +37,10 @@
     _nav = [[basenavViewController alloc]initWithRootViewController:VC];
     self.window.rootViewController = _nav;
     
-    [_nav pushViewController:[[loginViewController alloc]init] animated:NO];
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"mjjjj"]) {
+        
+        [_nav pushViewController:[[loginViewController alloc]init] animated:NO];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

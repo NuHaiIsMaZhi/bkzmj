@@ -7,6 +7,7 @@
 //
 
 #import "registerViewController.h"
+#import "SVProgressHUD.h"
 #import "NetWorkRequest.h"
 
 @interface registerViewController ()
@@ -18,6 +19,12 @@
     UIButton *yanbtn;
     NSTimer *verifyTime;
     int mTime;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+ 
+    [super viewWillDisappear:animated];
+    [verifyTime invalidate];
 }
 
 - (void)viewDidLoad {
@@ -49,7 +56,6 @@
     self.textField2.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.textField2.layer.borderColor = [UIColor whiteColor].CGColor;
     self.textField2.placeholder = @"请输入验证码";
-    self.textField2.secureTextEntry = YES;
     self.textField2.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetHeight(self.textField2.frame), CGRectGetHeight(self.textField2.frame))];
     self.textField2.leftViewMode = UITextFieldViewModeAlways;
     UIImageView* imgPwd = [[UIImageView alloc] initWithFrame:CGRectMake(6, 6, 28, 28)];
@@ -97,12 +103,11 @@
     registerbtn.backgroundColor = RGB2UIColor(255, 91, 96);
     registerbtn.frame = CGRectMake(CGRectGetMinX(self.textField1.frame), CGRectGetMaxY(self.textField3.frame)+35, CGRectGetWidth(self.textField1.frame), CGRectGetHeight(self.textField1.frame)+10);
     [self.view addSubview:registerbtn];
-    
+    [registerbtn addTarget:self action:@selector(sendaction) forControlEvents:UIControlEventTouchUpInside];
+
     self.view.backgroundColor = RGB2UIColor(200, 200, 200);
-    // Do any additional setup after loading the view.
     
-    verifyTime = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAdvanced:) userInfo:nil repeats:YES];
-    mTime = 60;
+    // Do any additional setup after loading the view.
 }
 
 - (void)creatVisulBg {
@@ -142,22 +147,65 @@
 }
 - (void)sendVerityAction{
     
-    verifyTime = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAdvanced:) userInfo:nil repeats:YES];
-    mTime = 60;
-
-    return;
+    [self hiddenkey];
+    if (_textField1.text.length == 0) {
+        
+        return  [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
+    }
+    
     NSMutableDictionary *postDict = [[NSMutableDictionary alloc]init];
     [postDict setObject:_textField1.text forKey:@"mobile"];
-    [postDict setObject:_textField2.text forKey:@"mcode"];
-    [postDict setObject:_textField3.text forKey:@"password"];
-    [postDict setObject:@"appstore" forKey:@"channel"];
-    
-    NSString *url = @"https://v6.beikaozu.com/users/reg/bymobile?";
+    [postDict setObject:@"reg" forKey:@"type"];
+
+    NSString *url = @"https://v6.beikaozu.com/users/mobilecode/send/v2?";
     [NetWorkRequest postataShowHUD:YES withUrl:url parameter:postDict andResponse:^(NSInteger code, id contentData, NSDictionary *exData) {
         
+        self->verifyTime = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerAdvanced:) userInfo:nil repeats:YES];
+        self->mTime = 60;
+        [SVProgressHUD showSuccessWithStatus:@"验证码已经发送"];
     }];
 
 }
+
+- (void)sendaction{
+ 
+    [self hiddenkey];
+    
+    if (_textField1.text.length == 0) {
+        
+        return  [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
+    }
+    if (_textField2.text.length == 0) {
+        
+        return  [SVProgressHUD showErrorWithStatus:@"请输入验证码"];
+    }
+    if (_textField3.text.length == 0) {
+        
+        return  [SVProgressHUD showErrorWithStatus:@"请输入密码"];
+    }
+
+    NSMutableDictionary* paratDict = [[NSMutableDictionary alloc] init];
+    [paratDict setObject:_textField1.text forKey:@"mobile"];
+    [paratDict setObject:_textField2.text forKey:@"mcode"];
+    [paratDict setObject:_textField3.text forKey:@"password"];
+    [paratDict setObject:@"appstore" forKey:@"channel"];
+
+    NSString *pathStr = @"https://v6.beikaozu.com/users/reg/bymobile?";
+
+    [NetWorkRequest postataShowHUD:YES withUrl:pathStr parameter:paratDict andResponse:^(NSInteger code, id contentData, NSDictionary *exData) {
+       
+        [SVProgressHUD showSuccessWithStatus:@"注册成功"];
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+}
+
+- (void)hiddenkey{
+ 
+    [_textField1 resignFirstResponder];
+    [_textField2 resignFirstResponder];
+    [_textField3 resignFirstResponder];
+}
+
 /*
 #pragma mark - Navigation
 
