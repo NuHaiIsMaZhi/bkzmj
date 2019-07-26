@@ -152,11 +152,21 @@ typedef NS_ENUM(NSInteger, WSLoginShowType) {
     
     smallView.frame = CGRectMake(20, 150, self.frame.size.width-40, CGRectGetMaxY(self.loginBtn.frame)+25);
 
+    UILabel *remindlabel = [UILabel new];
+    remindlabel.frame = CGRectMake(20, CGRectGetMaxY(smallView.frame)+21, 100, 20);
+    remindlabel.text = @"还没有账号？快去";
+    remindlabel.textColor = UIColor.blackColor;
+    remindlabel.textAlignment = NSTextAlignmentLeft;
+    remindlabel.font = [UIFont systemFontOfSize:15];
+    [remindlabel sizeToFit];
+    [self addSubview:remindlabel];
+    
+    
     UIButton *registerBtn = [UIButton new];
 //    registerBtn.backgroundColor = UIColor.redColor;
-    registerBtn.frame = CGRectMake(10, CGRectGetMaxY(smallView.frame)+20, 60, 30);
+    registerBtn.frame = CGRectMake(CGRectGetMaxX(remindlabel.frame), CGRectGetMaxY(smallView.frame)+15, 55, 30);
     [registerBtn setTitle:@"注册" forState:UIControlStateNormal];
-    [registerBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [registerBtn setTitleColor:RGB2UIColor(254, 90, 95) forState:UIControlStateNormal];
     registerBtn.titleLabel.font = [UIFont systemFontOfSize:17];
     [self addSubview:registerBtn];
     [registerBtn addTarget:self action:@selector(regiset) forControlEvents:UIControlEventTouchUpInside];
